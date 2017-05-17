@@ -13,8 +13,8 @@ else
 fi
 
 # Set Europe/Moscow timezone
-yes | cp /etc/localtime /tmp/old.localetime -f
-rm /etc/localtime -f
+yes | cp /etc/localtime /tmp/old.localetime -f && \
+rm /etc/localtime -f && \
 ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
 
 # Check timezone
